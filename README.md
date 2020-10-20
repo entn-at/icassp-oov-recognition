@@ -4,19 +4,19 @@ This has data and code related to the ICASSP submission "A comparison of methods
 
 # Data
 
-This contains for English and German:
-    - The train and test set in kaldi format (audio files not included)
-    - The lexicon
-    - For convenience the list of OOVs in the test set relative to the lexicon 
+This contains for English and German:  
+    - The train and test set in kaldi format (audio files not included)  
+    - The lexicon  
+    - For convenience the list of OOVs in the test set relative to the lexicon  
 
 Links to LM data will be added.
 
 # Scripts
 
-Currently contains scripts to 
-    - create the train/test partition from a (kaldi formatted) data folder containing CommonVoice data, `build_cv_test_train.py`
-    - create the HCL graph which can be inserted into an existing HCLG, `compose_hcl.sh`
-    - recover words from a decoded lattice that phones arcs attached to the `<unk>` token, `recover_unk_words.sh`
+Currently contains scripts to  
+    - create the train/test partition from a (kaldi formatted) data folder containing CommonVoice data, `build_cv_test_train.py`  
+    - create the HCL graph which can be inserted into an existing HCLG, `compose_hcl.sh`  
+    - recover words from a decoded lattice that phones arcs attached to the `<unk>` token, `recover_unk_words.sh`  
 
 # libs
 
