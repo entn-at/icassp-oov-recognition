@@ -22,4 +22,4 @@ Currently contains scripts to
 
 This has code which wraps OpenFST, and functions for modifying graphs (`insert`, `replace_single`, `add_boost`).
 
-To compile you will need to include add a symlink inside the libs/ directory to a copy of the pybind11 repository, and to use `LD_LIBRARY_PATH` needs have the OpenFST libs in its path.
+To compile you will need to include add a symlink inside the libs/ directory to a copy of the pybind11 repository, and to use `LD_LIBRARY_PATH` needs have the OpenFST libs in its path and copy the compiled .so to the site-packages/ directory (run `python -m site` to find).
