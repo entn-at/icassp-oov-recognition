@@ -8,6 +8,7 @@ This contains for English and German:
     - The train and test set in kaldi format (audio files not included)  
     - The lexicon  
     - For convenience the list of OOVs in the test set relative to the lexicon  
+    - The lexicon for the OOV-words
 
 Links to LM data will be added.
 
