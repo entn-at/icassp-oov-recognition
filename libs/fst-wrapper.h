@@ -18,6 +18,11 @@ public:
     fst_ = new fst::script::VectorFstClass("standard");
   }
 
+  WrappedFst(std::string fst_fpath) {
+    fst_ = new fst::script::VectorFstClass("standard");
+    Read(fst_fpath);
+  }
+
   WrappedFst(const WrappedFst& wfst) {
     fst_ = new fst::script::VectorFstClass("standard");
     int start_state = wfst.GetStart();

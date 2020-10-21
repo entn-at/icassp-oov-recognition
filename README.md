@@ -2,7 +2,7 @@
 
 This has data and code related to the ICASSP submission "A comparison of methods for OOV-word recognition"
 
-# Data
+# data
 
 This contains for English and German:  
     - The train and test set in kaldi format (audio files not included)  
@@ -12,7 +12,7 @@ This contains for English and German:
 
 Links to LM data will be added.
 
-# Scripts
+# scripts
 
 Currently contains scripts to  
     - create the train/test partition from a (kaldi formatted) data folder containing CommonVoice data, `build_cv_test_train.py`  

@@ -172,7 +172,7 @@ void WrappedFst::Insert(const int olabel, WrappedFst* fst) {
         }
       }
       if (start_state == -1) throw "WTF!";
-      this->AddArc(state, start_state, 0, 0, arc_to_replace.weight);
+      this->AddArc(state, start_state, 0, 0, arc_to_replace.weight + 2.3);
 
       for (int substate: fst->States()) {
         for (Arc arc: fst->GetArcs(substate)) {
@@ -240,7 +240,7 @@ void WrappedFst::ReplaceSingle(const int olabel, WrappedFst* fst) {
   for (std::pair<int, Arc> pair: arcs_to_replace) {
     int state = pair.first;
     Arc arc = pair.second;
-    this->AddArc(state, start_state, 0, 0, arc.weight);
+    this->AddArc(state, start_state, 0, 0, arc.weight + 2.3);
   }
   for (int substate: fst->States()) {
     for (Arc arc: fst->GetArcs(substate)) {
