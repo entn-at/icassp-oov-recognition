@@ -13,7 +13,7 @@ out=$9
 lattice-align-words $lang/phones/word_boundary.int $mdl "ark:gunzip -c $lats/lat*gz |" ark:- | \
     lattice-scale --inv-acoustic-scale=$lmwt ark:- ark:- | \
     lattice-add-penalty --word-ins-penalty=$wip ark:- ark:- | \
-    lattice-best-path ark:- ark:- | \  # had -1best, can't be right??
+    lattice-1best ark:- ark:- | \
     lattice-arc-post --acoustic-scale=0.1 $mdl ark:- - | \
     utils/int2sym.pl -f 5 $lang/words.txt | \
     utils/int2sym.pl -f 6- $lang/phones.txt > $work/post_${lmwt}_${wip}.txt
