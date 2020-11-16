@@ -14,7 +14,7 @@
 namespace py = pybind11;
 
 
-PYBIND11_MODULE(fast, m) {
+PYBIND11_MODULE(wrappedfst, m) {
   m.doc() = "pybind11 plugin";
 
   py::class_<Arc>(m, "Arc")

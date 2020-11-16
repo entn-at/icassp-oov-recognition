@@ -1,10 +1,10 @@
-import fast
+import wrappedfst
 import os
 
 
 def expand_fst(fst, to_expand, isyms):
     for state in fst.states():
-        arc_iterator = fast.ArcIterator(fst, state)
+        arc_iterator = wrappedfst.ArcIterator(fst, state)
         arcs_to_keep = []
         arcs_to_expand = []
         while not arc_iterator.Done():
@@ -58,7 +58,7 @@ def main(infsts, to_expand_f, isym_f, outfsts, noexpand: ('', 'flag', None) = Fa
         with open(to_expand_f) as fh:
             to_expand = set(fh.read().splitlines())
 
-    lst = fast.WrappedFst.read_ark_entries(infsts)
+    lst = wrappedfst.WrappedFst.read_ark_entries(infsts)
     if os.path.isfile(outfsts): os.remove(outfsts)
     for key, fst in lst:
         if not noexpand:
